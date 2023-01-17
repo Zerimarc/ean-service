@@ -71,7 +71,7 @@ public class ProductServiceImpl implements ProductService {
     public ResponseEntity<Object> getProductInfoByEAN(String ean){
         if (ean.length() != 13) {
             SuccessRest msgError = new SuccessRest(false, "El código EAN debe tener 13 digitos");
-            return new ResponseEntity<>(msgError, HttpStatus.LENGTH_REQUIRED);
+            return new ResponseEntity<>(msgError, HttpStatus.BAD_REQUEST);
         }
         Integer idSupplier = Integer.valueOf(ean.substring(0, 7));
         Integer idProduct = Integer.valueOf(ean.substring(7, 12));
