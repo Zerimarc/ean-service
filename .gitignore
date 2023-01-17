@@ -33,4 +33,5 @@ build/
 .vscode/
 
 ### H2 files ###
-.db
+*.db
+h2.mv.db
