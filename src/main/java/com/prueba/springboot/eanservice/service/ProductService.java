@@ -11,5 +11,6 @@ public interface ProductService {
     public ResponseEntity<SuccessRest> delProduct(Integer id);
     public ResponseEntity<Object> editProduct(Product product, BindingResult bindingResult);
     public ResponseEntity<Object> getProductById(Integer id);
+    public ResponseEntity<Object> getProductInfoByEAN(String ean);
 
 }

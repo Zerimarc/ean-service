@@ -42,4 +42,10 @@ public class ProductControllerImpl implements ProductController {
         return service.getProductById(id);
     }
 
+    @Override
+    @GetMapping("/search/{ean}")
+    public ResponseEntity<Object> getProductInfoByEAN(@PathVariable String ean){
+        return service.getProductInfoByEAN(ean);
+    }
+
 }
